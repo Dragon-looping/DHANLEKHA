@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: #080807;
+    color: #F4EFE5;
+    font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.01em;
+  }
+
+  /* Custom subtle scrollbar in warm dark bronze */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #080807;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #282016;
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #D6B77A;
+  }
+}
+
+/* Atmospheric golden lighting utilities */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFFDF8 0%, #D6B77A 50%, #B89758 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-amber-gradient {
+  background: linear-gradient(135deg, #F4EFE5 0%, #E5A94B 60%, #B87625 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-luxury {
+  background: linear-gradient(180deg, #191713 0%, #11100D 100%);
+  border: 1px solid rgba(214, 183, 122, 0.12);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-luxury:hover {
+  border-color: rgba(214, 183, 122, 0.3);
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.8), 0 0 25px rgba(229, 169, 75, 0.08);
+}
+
+.border-subtle-gold {
+  border: 1px solid rgba(214, 183, 122, 0.14);
+}
+
+/* Reflective floor illusion */
+.reflective-surface {
+  position: relative;
+}
+.reflective-surface::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(to top, rgba(8, 8, 7, 0.95), transparent);
+  pointer-events: none;
+}

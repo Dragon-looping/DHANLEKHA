@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="orbitGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5F2EA" />
+      <stop offset="40%" stop-color="#D7C39A" />
+      <stop offset="100%" stop-color="#9E8863" />
+    </linearGradient>
+    <linearGradient id="orbitEmerald" x1="100%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#00D6A0" />
+      <stop offset="60%" stop-color="#A7E8CE" />
+      <stop offset="100%" stop-color="#080A0D" />
+    </linearGradient>
+    <radialGradient id="centralGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00D6A0" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#080A0D" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Ambient Glow -->
+  <circle cx="50" cy="50" r="38" fill="url(#centralGlow)" />
+
+  <!-- Outer Incoming Wealth Ring -->
+  <path d="M 50 12 A 38 38 0 0 1 88 50 C 88 66 76 78 60 76 C 44 74 38 62 38 50 C 38 38 46 26 50 12 Z" 
+        stroke="url(#orbitGold)" stroke-width="4.5" stroke-linecap="round" fill="none" opacity="0.95" />
+
+  <!-- Interlocking Outgoing Ring creating continuous central balance -->
+  <path d="M 50 88 A 38 38 0 0 1 12 50 C 12 34 24 22 40 24 C 56 26 62 38 62 50 C 62 62 54 74 50 88 Z" 
+        stroke="url(#orbitEmerald)" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.9" />
+
+  <!-- Central Balance Point -->
+  <circle cx="50" cy="50" r="3.5" fill="#D7C39A" />
+</svg>
